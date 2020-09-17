@@ -11,12 +11,13 @@ class UI {
       <div class="row">
         <div class="col-md-3">
           <img src="${user.avatar_url}" class='img-fluid'>
+          <button type="button" class="btn btn-block btn-primary mt-3" href="${user.url}" style="font-size: 16px">Profile</button>
         </div>
         <div class="col-md-9">
-          <span class="badge badge-secondary p-3">Public Repos: ${user.public_repos}</span>
-          <span class="badge badge-success p-3">Followers: ${user.followers}</span>
-          <span class="badge badge-warning p-3">Following: ${user.following}</span>
-          <span class="badge badge-info p-3">Public Gists: ${user.following}</span>
+          <span class="badge badge-secondary p-2 mr-2" style="font-size: 16px">Public Repos: ${user.public_repos}</span>
+          <span class="badge badge-success p-2 mr-2" style="font-size: 16px">Followers: ${user.followers}</span>
+          <span class="badge badge-warning p-2 mr-2" style="font-size: 16px">Following: ${user.following}</span>
+          <span class="badge badge-info p-2 mr-2" style="font-size: 16px">Public Gists: ${user.following}</span>
           <ul class="list-group mt-3">
             <li class="list-group-item">Username: ${user.login}</li>
             <li class="list-group-item">Website/Blog: <a href="${user.blog}">${user.blog}</a></li>
@@ -28,10 +29,6 @@ class UI {
       </div>
     </div>
     `
-
-    // <li class="list-group-item">Public Repos: ${user.following}</li>
-    // <li class="list-group-item">Followers: ${user.followers}</li>
-    // <li class="list-group-item">Following: ${user.following}</li>
   }
 
   showAlert(message, className) {
